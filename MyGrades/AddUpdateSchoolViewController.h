@@ -9,5 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface AddUpdateSchoolViewController : UIViewController
+{
+    
+}
+
+
+@property (strong, nonatomic) IBOutlet UIView *txtSchoolName;
+@property (weak, nonatomic) IBOutlet UITextField *txtCity;
+@property (weak, nonatomic) IBOutlet UITextField *txtState;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnSave;
+- (IBAction)btnSave_Click:(id)sender;
 
 @end

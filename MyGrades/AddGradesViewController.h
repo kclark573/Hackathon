@@ -9,5 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface AddGradesViewController : UIViewController
+{
+    
+}
+
+@property (weak, nonatomic) IBOutlet UITextField *txtCategory;
+@property (weak, nonatomic) IBOutlet UITextField *txtName;
+@property (weak, nonatomic) IBOutlet UITextField *txtGrade;
+@property (weak, nonatomic) IBOutlet UILabel *lblWhatIf;
+
+
+- (IBAction)btnWhatIf_Click:(id)sender;
+- (IBAction)btnSave_Click:(id)sender;
 
 @end

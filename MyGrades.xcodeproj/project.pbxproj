@@ -25,6 +25,11 @@
 		573E8A5E1C011E3F002C2156 /* AddGradesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A5D1C011E3F002C2156 /* AddGradesViewController.m */; };
 		573E8A611C01300D002C2156 /* GPATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A601C01300D002C2156 /* GPATableViewController.m */; };
 		573E8A641C01314D002C2156 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A631C01314D002C2156 /* SignInViewController.m */; };
+		573E8A6A1C016397002C2156 /* School.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A691C016397002C2156 /* School.m */; };
+		573E8A6D1C016C66002C2156 /* Semester.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A6C1C016C66002C2156 /* Semester.m */; };
+		573E8A701C016C80002C2156 /* Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A6F1C016C80002C2156 /* Class.m */; };
+		573E8A731C016C92002C2156 /* Grade.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A721C016C92002C2156 /* Grade.m */; };
+		573E8A761C016CBD002C2156 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E8A751C016CBD002C2156 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,16 @@
 		573E8A601C01300D002C2156 /* GPATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPATableViewController.m; sourceTree = "<group>"; };
 		573E8A621C01314D002C2156 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		573E8A631C01314D002C2156 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		573E8A681C016397002C2156 /* School.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = School.h; sourceTree = "<group>"; };
+		573E8A691C016397002C2156 /* School.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = School.m; sourceTree = "<group>"; };
+		573E8A6B1C016C66002C2156 /* Semester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Semester.h; sourceTree = "<group>"; };
+		573E8A6C1C016C66002C2156 /* Semester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Semester.m; sourceTree = "<group>"; };
+		573E8A6E1C016C80002C2156 /* Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class.h; sourceTree = "<group>"; };
+		573E8A6F1C016C80002C2156 /* Class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Class.m; sourceTree = "<group>"; };
+		573E8A711C016C92002C2156 /* Grade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grade.h; sourceTree = "<group>"; };
+		573E8A721C016C92002C2156 /* Grade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grade.m; sourceTree = "<group>"; };
+		573E8A741C016CBD002C2156 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		573E8A751C016CBD002C2156 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +146,7 @@
 		573E8A121C00F7E4002C2156 /* MyGrades */ = {
 			isa = PBXGroup;
 			children = (
+				573E8A671C016373002C2156 /* Models */,
 				573E8A461C010CEC002C2156 /* Controllers */,
 				573E8A161C00F7E4002C2156 /* AppDelegate.h */,
 				573E8A171C00F7E4002C2156 /* AppDelegate.m */,
@@ -174,28 +190,61 @@
 		573E8A461C010CEC002C2156 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				573E8A471C010D20002C2156 /* SchoolTableViewController.h */,
-				573E8A481C010D20002C2156 /* SchoolTableViewController.m */,
-				573E8A4A1C010D6C002C2156 /* AddUpdateSchoolViewController.h */,
-				573E8A4B1C010D6C002C2156 /* AddUpdateSchoolViewController.m */,
+				573E8A661C014AD0002C2156 /* StandardViewControllers */,
+				573E8A651C014AB3002C2156 /* TableViewControllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		573E8A651C014AB3002C2156 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				573E8A5F1C01300D002C2156 /* GPATableViewController.h */,
+				573E8A601C01300D002C2156 /* GPATableViewController.m */,
 				573E8A4D1C011BC6002C2156 /* SemesterTableViewController.h */,
 				573E8A4E1C011BC6002C2156 /* SemesterTableViewController.m */,
 				573E8A501C011C4A002C2156 /* ClassTableViewController.h */,
 				573E8A511C011C4A002C2156 /* ClassTableViewController.m */,
 				573E8A531C011C85002C2156 /* GradesTableViewController.h */,
 				573E8A541C011C85002C2156 /* GradesTableViewController.m */,
+				573E8A471C010D20002C2156 /* SchoolTableViewController.h */,
+				573E8A481C010D20002C2156 /* SchoolTableViewController.m */,
+			);
+			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		573E8A661C014AD0002C2156 /* StandardViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				573E8A621C01314D002C2156 /* SignInViewController.h */,
+				573E8A631C01314D002C2156 /* SignInViewController.m */,
 				573E8A561C011D28002C2156 /* AddClassViewController.h */,
 				573E8A571C011D28002C2156 /* AddClassViewController.m */,
 				573E8A591C011DC4002C2156 /* AddSemesterViewController.h */,
 				573E8A5A1C011DC4002C2156 /* AddSemesterViewController.m */,
 				573E8A5C1C011E3F002C2156 /* AddGradesViewController.h */,
 				573E8A5D1C011E3F002C2156 /* AddGradesViewController.m */,
-				573E8A5F1C01300D002C2156 /* GPATableViewController.h */,
-				573E8A601C01300D002C2156 /* GPATableViewController.m */,
-				573E8A621C01314D002C2156 /* SignInViewController.h */,
-				573E8A631C01314D002C2156 /* SignInViewController.m */,
+				573E8A4A1C010D6C002C2156 /* AddUpdateSchoolViewController.h */,
+				573E8A4B1C010D6C002C2156 /* AddUpdateSchoolViewController.m */,
 			);
-			name = Controllers;
+			name = StandardViewControllers;
+			sourceTree = "<group>";
+		};
+		573E8A671C016373002C2156 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				573E8A681C016397002C2156 /* School.h */,
+				573E8A691C016397002C2156 /* School.m */,
+				573E8A6B1C016C66002C2156 /* Semester.h */,
+				573E8A6C1C016C66002C2156 /* Semester.m */,
+				573E8A6E1C016C80002C2156 /* Class.h */,
+				573E8A6F1C016C80002C2156 /* Class.m */,
+				573E8A711C016C92002C2156 /* Grade.h */,
+				573E8A721C016C92002C2156 /* Grade.m */,
+				573E8A741C016CBD002C2156 /* User.h */,
+				573E8A751C016CBD002C2156 /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,10 +380,15 @@
 			files = (
 				573E8A1B1C00F7E4002C2156 /* ViewController.m in Sources */,
 				573E8A581C011D28002C2156 /* AddClassViewController.m in Sources */,
+				573E8A761C016CBD002C2156 /* User.m in Sources */,
+				573E8A6D1C016C66002C2156 /* Semester.m in Sources */,
 				573E8A611C01300D002C2156 /* GPATableViewController.m in Sources */,
+				573E8A6A1C016397002C2156 /* School.m in Sources */,
 				573E8A5B1C011DC4002C2156 /* AddSemesterViewController.m in Sources */,
+				573E8A731C016C92002C2156 /* Grade.m in Sources */,
 				573E8A641C01314D002C2156 /* SignInViewController.m in Sources */,
 				573E8A5E1C011E3F002C2156 /* AddGradesViewController.m in Sources */,
+				573E8A701C016C80002C2156 /* Class.m in Sources */,
 				573E8A521C011C4A002C2156 /* ClassTableViewController.m in Sources */,
 				573E8A4F1C011BC6002C2156 /* SemesterTableViewController.m in Sources */,
 				573E8A551C011C85002C2156 /* GradesTableViewController.m in Sources */,

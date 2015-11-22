@@ -34,4 +34,9 @@
 }
 */
 
+- (IBAction)btnWhatIf_Click:(id)sender {
+}
+
+- (IBAction)btnSave_Click:(id)sender {
+}
 @end

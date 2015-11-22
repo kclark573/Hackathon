@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ClassTableViewController : UITableViewController
+{
+    NSInteger SemesterID;
+}
+
 
 @end

@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface AddSemesterViewController : UIViewController
+{
+    
+}
 
+
+@property (weak, nonatomic) IBOutlet UITextField *txtSemester;
+@property (weak, nonatomic) IBOutlet UITextField *txtYear;
+
+
+- (IBAction)btnSave_Click:(id)sender;
 @end

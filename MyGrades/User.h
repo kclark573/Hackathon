@@ -1,17 +1,15 @@
 //
-//  GPATableViewController.h
+//  User.h
 //  MyGrades
 //
 //  Created by Kasey Clark on 11/21/15.
 //  Copyright © 2015 StraightouttaCompiler. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface GPATableViewController : UITableViewController
+@interface User : NSObject
 {
-    NSInteger StudentID;
+    
 }
-
-
 @end

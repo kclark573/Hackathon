@@ -7,6 +7,8 @@
 //
 
 #import "SchoolTableViewController.h"
+#import "School.h"
+#import "SemesterTableViewController.h"
 
 @interface SchoolTableViewController ()
 
@@ -16,12 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    Schools = [School GetAllSchoolsWithStudentID:StudentID];
+    [Schools addObject:@"Add School"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,27 +29,65 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return Schools.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
     
-    // Configure the cell...
+    if(indexPath.row == (Schools.count - 1))
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"AddSchoolCell" forIndexPath:indexPath];
+        cell.textLabel.text = [Schools objectAtIndex:indexPath.row];
+    }
+    
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"SchoolCell" forIndexPath:indexPath];
+        School* temp = [Schools objectAtIndex:indexPath.row];
+        cell.textLabel.text = temp.SchoolName;
+        cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%@, %@", temp.City, temp.State];
+    }
+    
     
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    IndexPath = indexPath;
+    
+    if(indexPath.row == (Schools.count - 1))
+        [self performSegueWithIdentifier:@"School2AddUpdateSchool" sender:self];
+    
+    else
+        [self performSegueWithIdentifier:@"School2Semester" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"School2AddUpdateSchool"])
+    {
+        
+    }
+    
+    else if([[segue identifier] isEqualToString:@"School2Semester"])
+    {
+        SemesterTableViewController* semester = [segue destinationViewController];
+        School* temp = [Schools objectAtIndex:IndexPath.row];
+        semester.SchoolID = temp.SchoolID;
+    }
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -88,11 +126,6 @@
 /*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 */
 
 @end

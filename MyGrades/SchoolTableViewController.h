@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface SchoolTableViewController : UITableViewController
+{
+    NSMutableArray *Schools;
+    NSInteger StudentID;
+    NSIndexPath* IndexPath;
+}
+
+@property NSInteger StudentID;
 
 @end
